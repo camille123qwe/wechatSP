@@ -1,0 +1,30 @@
+<!--pages/category/category.wxml-->
+<view class='container category'>
+  <view class='category-wrap'>
+    <view class="category-item" wx:for="{{categories}}" wx:key="groupid" bindtap='categoryTap' style="background:{{item.groupid==currentId?'#fff':'#f7f7f7'}}" data-groupid='{{item.groupid}}'>
+      <text>{{item.groupname}}</text>
+      <view class='sline'></view>
+    </view>
+  </view>
+  <view class='goods-wrap'>
+    <view class='goods-detail' wx:for="{{goodslist}}" wx:key="goodsid" bindtap='goodsDetail' data-goods='{{item}}'>
+      <view class='goods-image'>
+        <image  wx:if='{{item.goodsface}}' 
+        src='{{item.goodsface}}'
+        binderror="errorFunction" data-errorimg="{{index}}"></image>
+      </view>
+      <view class='goods-info'>
+        <view class='goods-name'>
+          {{item.goodsname}}
+        </view>
+        <view class='price'>
+          <text class='fuhao'>￥</text> {{item.sellprice>0?item.sellprice/100:"待定"}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+  <view class='redyouzi' bindtap='redyouzi'>
+    <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+    红柚子科技技术支持
+  </view>

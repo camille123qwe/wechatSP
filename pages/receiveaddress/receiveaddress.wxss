@@ -1,0 +1,146 @@
+/* pages/receiveaddress/receiveaddress.wxss */
+@import '../../model/model.wxss';
+.wrap-view{
+   background-color: #f7f7f7;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+}
+.addressinfo,.detailaddress,.detailaddressinfo,.detailaddresstip,.moreicon,.name,.nameinfo,.nametip{
+  background-color: #ffffff;
+}
+.addressinfo{
+  border-top: 2rpx solid #eaeaea; 
+}
+.nameinfo{
+  height: 95rpx; 
+  border-bottom: 1rpx solid #eaeaea;
+  display: flex;
+  align-items: center;
+}
+.nametip{
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  color: #444444;
+  width: 180rpx;
+}
+.name{
+  font-size: 28rpx;
+  color: #333333;
+}
+.moreicon{
+  width: 13rpx;
+  height: 22rpx;
+  margin: 39rpx 30rpx auto auto;
+  float: right;
+}
+.detailaddress{
+  height: 176rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.detailaddresstip{
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  width: 180rpx;
+  margin-top: -100rpx;
+  color: #444444;
+}
+.detailaddressinfo{
+  font-size: 28rpx;
+  color: #333333; 
+  height: 120rpx !important;
+  width: 480rpx;
+}
+.footerbar{
+  margin-top: 80rpx;
+  height: 92rpx;
+  background-color: #fb6d07;
+  border-radius: 20rpx;
+  width: 80% !important;
+  margin-left: 10%;
+  text-align: center;
+  color: #fff;
+}
+.saveButton{
+  height: 92rpx;
+  line-height: 92rpx;
+  width: 100%;
+  margin-left: 45%;
+  color: #ffffff;
+}
+/**-------------------**/
+/**index.wxss**/
+page{
+  background-color: rgba(255, 255, 255, 1); 
+}
+
+.infoText{
+    /* margin-top: 20rpx; */
+    justify-content: center; 
+}
+
+picker-view{
+  background-color: white;
+  padding: 0;
+  width: 100%; 
+  height: 380rpx;
+  bottom: 0;
+  position: fixed;
+}
+
+picker-view-column view{
+  vertical-align:middle; 
+  font-size: 28rpx;
+  line-height: 28rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------------------------------- */
+
+.animation-element-wrapper {
+  display: flex;  
+  position: fixed;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+.animation-element {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 470rpx;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.animation-button {
+  margin-top: 20rpx;
+  top:20rpx;
+  width: 400rpx;
+  height: 100rpx; 
+  line-height: 100rpx; 
+  align-items:center;
+}
+.left-bt{
+  left: 30rpx;
+}
+.right-bt {
+  right: 30rpx;
+}
+
+.line{
+  display: block;
+  position: fixed;
+  height: 1rpx;
+  width: 100%;
+  margin-top: 89rpx; 
+  background-color: #eeeeee;
+}

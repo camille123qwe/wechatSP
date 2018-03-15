@@ -1,0 +1,45 @@
+<!--pages/payscussess/payscussess.wxml-->
+<!--pages/orderinformation/orderinformation.wxml-->
+<view>
+  <view class='info-tittle'>
+    <view class='tet-box'>
+      <image class='tittle-img' src='/assests/icon/odersimg/icon_yifukuan@2x.png'></image>
+      <text class='tit-text'>买家已付款</text>
+    </view>
+  </view>
+  <view class='address'>
+    <view class='address-left'>
+      <view class='merchname'>收货人：{{defauladdres.receivername}} {{defauladdres.mobile}}</view>
+      <view class='addrname'>收货地址：{{defauladdres.address}}</view>
+    </view>
+    <view class='dinfo'>
+     <view>总价: 
+        <text class='money'><text class='fuhao'>￥</text>{{money/100}}</text>
+      </view>
+      <view class='button-wrap'>
+        <button bindtap='order'>查看订单</button> <button bindtap='gohome'>返回首页</button>
+      </view>
+    </view>
+    
+  </view>
+</view>
+<view class='hot-wrap'>
+  <view class='hot-title'>
+    <image src='{{remaiicon}}'></image>
+    <text>你可能还想买</text>
+  </view>
+  <view class="hot-view">
+    <view class='flex-img' wx:for="{{goodslist}}" wx:key="goodsname" bindtap="goodsDetail" data-goods="{{item}}">
+      <image src="{{img_url}}{{item.goodsface}}" mode='widthFix' binderror="errorFunction" data-errorimg="{{index}}"></image>
+      <view class='noflex'>
+        <text class='goodsname'>{{item.goodsname}}</text>
+        <view class='price'>
+          <text class='fuhao'>￥</text>{{item.sellprice>0?item.sellprice/100:"待定"}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='redyouzi' bindtap='redyouzi'>
+  <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+  红柚子科技技术支持
+</view>

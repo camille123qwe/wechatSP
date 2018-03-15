@@ -1,0 +1,87 @@
+<!--pages/orderinformation/orderinformation.wxml-->
+<view>
+  <view class='info-tittle'>
+    <view class='tet-box'>
+      <image class='tittle-img' hidden='{{ordersattus==1?false:true}}' src='/assests/icon/odersimg/icon_daifukuan@2x.png'></image>
+      <image class='tittle-img' hidden='{{ordersattus==3?false:true}}' src='/assests/icon/odersimg/icon_daifahuo@2x.png'></image>
+      <image class='tittle-img' hidden='{{ordersattus==4|| ordersattus==7||ordersattus==5?false:true}}' src='/assests/icon/odersimg/icon_yiwancheng@2x.png'></image>
+      <text class='tit-text' hidden='{{ordersattus==1?false:true}}'>等待买家付款</text>
+      <text class='tit-text' hidden='{{ordersattus==3 || ordersattus==2 ||ordersattus==8||ordersattus==9?false:true}}'>卖家已发货</text>
+      <text class='tit-text' hidden='{{ordersattus==4|| ordersattus==7||ordersattus==5?false:true}}'>已完成</text>
+    </view>
+  </view>
+
+
+  <view class='address'>
+    <view class='address-icon'>
+      <image class='ioc-img' src='/assests/icon/odersimg/icon_dizhi @2x.png'></image>
+    </view>
+
+    <view class='address-left'>
+      <text class='merchname info'>{{defauladdres.receivername}}</text>
+      <text class='phonenum info'>{{defauladdres.mobile}}</text>
+      <view class='address-info'>{{defauladdres.address}}</view>
+    </view>
+  </view>
+
+  <view class='message'>
+    <view class='message-icon'>
+      <image class='ioc-img' src='/assests/icon/odersimg/icon_maijialiuyan@2x.png'></image>
+    </view>
+    <view class='tit-info'>
+      <text class='message-tit'>买家留言</text>
+      <text class='message-info'>暂没留言！</text>
+    </view>
+  </view>
+  <text class='hr'></text>
+
+  <view class='shorelist'>
+    <view class='shoreheader'>
+      <image class='storeicon' src='/assests/icon/shoppingcar/icon_shangdian@2x.png'></image>
+      <text class='storename'>{{ordertitle}}</text>
+    </view>
+    <view class='goodlistwrap' wx:for="{{orderlist}}" wx:for-index ='imgindex'>
+      <view class='goodlist left'>
+         <image class='goodimage left' wx:if='{{item.custCartGoodsItems.goodsInfo.goodsface}}' 
+        src="{{item.custCartGoodsItems.goodsInfo.goodsface}}"
+         binderror="errorface" data-errorimg="{{imgindex}}" mode='scaleToFill'></image> 
+        <view class='goodinfo'>
+          <text class='goodname'>{{item.custCartGoodsItems.goodsInfo.goodsname}}</text>
+
+          <text class='goodstandard'>
+            <text class='standard-left'>
+              <text class='standard' wx:for='{{item.custCartGoodsItems.props}}' wx:for-item="prop">{{prop.valuename}}</text>
+          </text>
+          <text class='salecount'>x{{item.totalcount}}</text>
+          </text>
+          <view class='orderprice'>{{'￥'+item.custCartGoodsItems.goodsInfo.sellprice/100}}</view>
+        </view>
+      </view>
+
+    </view>
+    <view class='infact'>实付款：
+      <text class='money'>{{'￥'+money/100}}</text>
+    </view>
+  </view>
+  <text class='hr'></text>
+</view>
+<view class='redyouzi' bindtap='redyouzi'>
+  <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+  红柚子科技技术支持
+</view>
+<view class='hot-wrap'>
+  <view class='hot-title'>
+    <image src='{{remaiicon}}'></image>
+    <text>猜你喜欢</text>
+  </view>
+  <view class="hot-view">
+    <view class='flex-img' wx:for="{{goodslist}}" wx:key="goodsname" bindtap="goodsDetail" data-goods="{{item}}">
+      <image wx:if='{{item.goodsface}}' src="{{item.goodsface}}" mode='widthFix' binderror="errorFunction" data-errorimg="{{index}}"></image>
+      <view class='noflex'>
+        <text class='goodsname'>{{item.goodsname}}</text>
+        <view class='price'>
+          <text class='fuhao'>￥</text>{{item.sellprice>0?item.sellprice/100:"待定"}}</view>
+      </view>
+    </view>
+  </view>
+</view>

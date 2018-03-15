@@ -1,0 +1,167 @@
+/* pages/mine/mine.wxss */
+.mine-wrap{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #f7f7f7;
+}
+.redyouzi{
+  bottom: -150rpx;
+}
+.userinfo{
+  width: 100%;
+  height: 242rpx;
+  display: flex;
+  align-items: center;  
+  position: relative;
+}
+.userinfo .bgimg{
+  width: 100%;
+  height: 242rpx;
+  position: absolute;
+}
+.user{
+  width: 124rpx;
+  height: 124rpx;
+  margin-left: 40rpx; 
+  z-index: 2;
+}
+.userinfo-avatar{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.userinfo-name{
+  height: 242rpx;
+  line-height: 242rpx;
+  font-size: 36rpx;
+  color: #ffffff;
+  margin-left: 36rpx;
+  display: inline-block;
+  z-index: 2;
+}
+.myorder,.tradeinfo,.myshoppingcar,.collectionlist{
+  background: #fff;
+}
+.myorder{
+  width: 100%;
+  height: 84rpx;
+  border-bottom: 1rpx solid #dddddd;
+  display: flex;
+  align-items: center;
+}
+.partone{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+ .myordericon{
+  width: 24rpx;
+  height: 28rpx;
+  margin-left: 40rpx;
+} 
+.myordertip{
+  height: 84rpx;
+  line-height: 84rpx;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #333333;
+}
+.parttwo{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:flex-end; 
+}
+.allorder{
+  font-size: 22rpx;
+  color: #666666;
+  margin-right: 14rpx; 
+}
+.more{
+  width: 13rpx;
+  height: 22rpx;
+  margin-right: 30rpx;
+}
+
+
+.tradeinfo{
+  width: 100%;
+  height: 176rpx;
+  display: box;
+  display: -moz-box;
+  display: -webkit-box;
+  border-bottom: solid 20rpx #f7f7f7;
+}
+.tradeitem{
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  align-items: center;
+  display: flex;
+}
+.align-item{
+  align-items:center;
+  margin: auto;
+}
+.tradeicon{
+  width: 48rpx;
+  height: 44rpx;
+  margin: 10rpx auto 10rpx auto;
+  display: block;
+}
+.tradetext{
+  font-size: 22rpx;
+  color: #333333;
+}
+
+
+.myshoppingcar{
+  width: 100%;
+  height:50px;
+  border-bottom: 20rpx solid #f7f7f7;
+}
+.myshoppingcaricon{
+  width: 28rpx;
+  height: 28rpx;
+}
+.myshoppingcariconunique{
+  width: 24rpx;
+  height: 28rpx;
+  margin-left: 40rpx;
+}
+.myshoppingcartip{
+  font-size: 26rpx;
+  color: #333333;
+  margin-left: 20rpx; 
+   height: 100rpx;
+  line-height: 100rpx; 
+}
+.myshoppingcarmore{
+  width: 13rpx;
+  height: 22rpx;
+  margin: 39rpx 30rpx auto auto;
+  float: right;
+}
+
+.collectionlist{
+  padding-left: 40rpx;
+}
+.mycollection{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1rpx solid #dddddd;
+  display: flex;
+  align-items: center;
+}
+.mycollection:last-child{
+  border-bottom: none;
+}
+.kefu{
+  position: relative;
+}
+.kefu contact-button{
+  position: absolute;
+  opacity: 0;
+}

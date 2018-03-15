@@ -1,0 +1,239 @@
+/* pages/shoppingcar/shoppingcar.wxss */
+page{
+  min-height: 100%;
+  position: relative;
+  background: #f7f7f7;
+  padding-bottom: 196rpx;
+}
+.wrap-view{
+  background-color: #f7f7f7;
+  min-height: 100%;
+  width: 100%;
+}
+.redyouzi{
+  bottom: 100rpx;
+}
+.shorelist{
+   background-color: #ffffff; 
+  margin-bottom: 20rpx;
+}
+.shoreheader{
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.shorelist:first-child{
+  border-top: 1rpx solid #dddddd;
+}
+.selecticon{
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+}
+.storeicon{
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 20rpx;
+}
+.storename{
+  font-size: 24rpx;
+  color: #333333;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+}
+
+.goodlist{
+  display: flex;
+  align-items: center; 
+  height: 220rpx;
+  width: 100%;
+  border-top: 1rpx solid #dddddd;
+  position: relative;
+  /*滑动  */
+  z-index:2;
+  background:white;
+  transition:left 0.2s ease-in-out;
+
+}
+.goodselecticon{
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+}
+.goodimage{
+  width: 250rpx;
+  height: 186rpx;
+  margin-left: 20rpx;
+}
+.goodinfo{
+  margin-left: 24rpx;
+  width: 400rpx;
+  height: 220rpx;
+  position: relative;
+}
+.goodname{
+  font-size: 26rpx;
+  color: #333333;
+  margin-top: 20rpx;
+  width: 100%;
+}
+.goodstandard{
+  font-size: 24rpx;
+  color: #888888;
+   margin-top: 16rpx;
+}
+.goodstandard text{
+  margin-right: 8rpx;
+}
+.count{
+  float:right;
+  padding-right:20rpx;
+}
+.goodprice{
+  font-size: 24rpx;
+  color: #fb6d07;
+  position: absolute;
+  left: 0;
+  bottom: 30rpx;
+}
+.stepper {
+background: #f5f5f5;
+width: 80px;
+height: 26px;
+border-radius: 3px;
+position: absolute;
+right: 20rpx;
+bottom: 24rpx;
+color: #cacaca;
+}
+
+.stepper text {
+width: 19px;
+line-height: 26px;
+text-align: center;
+float: left;
+}
+
+.stepper input {
+width: 40px;
+height: 26px;
+float: left;
+margin: 0 auto;
+text-align: center;
+font-size: 12px;
+/*给中间的input设置左右边框即可*/
+border-left: 1px solid #fff;
+border-right: 1px solid #fff;
+color: #333;
+}
+
+.footer{
+  height: 93rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  z-index: 888;
+}
+.allselecticon{
+  height: 36rpx;
+  width: 36rpx;
+  margin-left: 20rpx;
+}
+.allselecttext{
+  font-size: 24rpx;
+  color: #666666;
+  height: 96rpx;
+  line-height: 96rpx;
+  width: 60rpx;
+  margin-left: 20rpx;
+}
+.restlttext{
+  width: 250rpx;
+  height: 100%;
+  margin-left: 160rpx;
+}
+.allaccounttip{
+  font-size: 30rpx;
+  color: #333333;
+  height: 96rpx;
+ 
+  line-height: 96rpx;
+}
+.allprice{
+  font-size: 30rpx;
+  color: #fb6d07;
+  height: 96rpx;
+  line-height: 96rpx; 
+}
+.account{
+  width: 210rpx;
+  margin-right: 0rpx;
+  background-color: #fb6d07;
+  color: #ffffff;
+  border-radius: 0;
+   height: 97rpx;
+   line-height: 96rpx;
+   font-size: 30rpx;
+    text-align: center;
+}
+.seleView,.seleAll{
+  display: flex;
+  align-items: center;
+}
+/*左滑删除  */
+ .item-oper{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+} 
+.oper-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150rpx;
+    z-index: 1;
+    color: white;
+    background: red;
+    font-size: 24rpx;
+}
+.item-oper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.left-wrap{
+  position: relative;
+}
+.blank{
+  color:#666;
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  z-index: 2;
+  overflow: hidden;
+  
+}
+
+.blank image{
+  width: 107rpx;
+  height: 120rpx;
+  margin: 236rpx 0 54rpx 0;
+}
+/*左滑删除  */

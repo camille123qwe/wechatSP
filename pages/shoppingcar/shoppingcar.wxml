@@ -1,0 +1,61 @@
+<!--pages/shoppingcar/shoppingcar.wxml-->
+<import src="../../component/toastHi/toastHi.wxml" />
+<template is="toast" data="{{ ..._toast_ }}" />
+<text class='topbor'></text>
+<view class='wrap-view'>
+  <view class='shorelist' wx:for="{{carts}}" wx:key='cartgoodstitle'>
+    <view class='shoreheader' bindtap="seleStore" data-index='{{index}}'>
+      <image class='selecticon' src='{{allcheck||item.selected?Checked:Uncheck}}'></image>
+      <image class='storeicon' src='{{storeicon}}'></image>
+      <text class='storename'>{{item.name}}</text>
+    </view>
+    <view class='left-wrap' wx:for="{{item.goodslist}}" wx:key="goodsid">
+      <view class='goodlist' data-index="{{index}}" data-mainindex='{{item.mainIndex}}' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="left:{{item.left + 'rpx'}}">
+        <view class='seleView' bindtap="seleGoods" data-index='{{index}}' data-mainindex='{{item.mainIndex}}'>
+          <image class='goodselecticon' src="{{allcheck||item.selected?Checked:Uncheck}}" mode='scaleToFill'></image>
+          <image class='goodimage' src='{{item.goodsInfo.goodsface}}' 
+         wx:if='{{item.goodsInfo.goodsface}}' 
+        binderror="errorFunction" data-errorimg="{{index}}"
+          mode='scaleToFill'></image>
+          <!-- <image class='goodimage' src='{{globalData.goodsfaceurl_900+item.goodsInfo.goodsface}}' mode='scaleToFill'></image> -->
+        </view>
+        <view class='goodinfo'>
+          <view class='goodname'>{{item.goodsInfo.goodsname}}</view>
+          <view class='goodstandard'>
+            <text wx:for='{{item.props}}' wx:for-item="prop">{{prop.valuename}}</text>
+            <text class='count'>×{{item.count}}</text>
+          </view>
+          <view class='goodprice'>{{'￥'+item.goodsInfo.sellprice/100}}</view>
+          <view class="stepper">
+            <text class="jian" bindtap='jian' data-value='{{item}}' data-index='{{index}}'>-</text>
+            <input type="number" placeholder='1' value="{{item.count}}" disabled='true' />
+            <text class="jia" bindtap='jia' data-value='{{item}}' data-index='{{index}}'>+</text>
+          </view>
+        </view>
+      </view>
+      <view class="item-oper">
+        <view class="oper-delete" bindtap="itemDelete" data-mainindex='{{item.mainIndex}}' data-index='{{index}}'>删除</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if='{{carts.length==0}}' class='blank'>
+  <image src='{{gouwuche}}'></image>
+  <view>去看看买点什么吧</view>
+</view>
+
+<view class='footer'>
+  <view bindtap='seleAll' class='seleAll'>
+    <image class='allselecticon' src='{{allcheck?Checked:Uncheck}}'></image>
+    <text class='allselecttext'>全选</text>
+  </view>
+  <view class='restlttext'>
+    <text class='allaccounttip'>合计：</text>
+    <text class='allprice'>{{totalPrice}}</text>
+  </view>
+  <view class='account' bindtap='dingdan'>{{'结算'+'('+count+')'}}</view>
+</view>
+<view class='redyouzi' bindtap='redyouzi'>
+  <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+  红柚子科技技术支持
+</view>

@@ -1,0 +1,64 @@
+<!--pages/myorder/myorder.wxml-->
+<import src="../../component/toastHi/toastHi.wxml" />
+<template is="toast" data="{{ ..._toast_ }}" />
+
+<view class='wrap-view'>
+  <view class='headerview'>
+
+    <text class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</text>
+    <text class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待付款</text>
+    <text class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">待发货</text>
+    <text class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">待收货</text>
+    <text class="tab-item {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">已完成</text>
+  </view>
+
+  <view class='shorelist' wx:for="{{orderlists}}" hidden='{{item.order}}'wx:for-index="mainindex" wx:key="name" data-thisor="{{item}}" bindtap="taporder">
+    <view class='shoreheader'>
+      <image class='storeicon' src='/assests/icon/shoppingcar/icon_shangdian@2x.png'></image>
+      <text class='storename'>{{item.storeInfo.storename}}</text>
+      <text class='orderstatustext'>{{item.goodstittle}}</text>
+    </view>
+    <view class='goodlistwrap' bindtap="">
+      <view class='goodlist left' wx:for="{{item.custOrder2Goodses}}" wx:key="img">
+               <image class='goodimage left' wx:if='{{item.goodsInfo.goodsface}}' src="{{item.goodsInfo.goodsface}}" binderror="errorFunction" data-errorimg="{{index}}"data-mainerror="{{mainindex}}"  mode='scaleToFill'></image>
+        <view class='goodinfo'>
+          <text class='goodname'>{{item.goodsInfo.goodsname}}</text>
+
+          <text class='goodstandard'>
+            <text class='standard-left'>
+              <text class='standard'></text>
+          <text class='standard'></text>
+          </text>
+          <text class='salecount'>{{'X'+item.totalcount}}</text>
+          </text>
+
+        </view>
+      </view>
+      <view class='orderinfo'>
+        <text class='orderprice'>{{item.totalgoodsprice/100}}</text>
+        <text class='orderinfotip'>{{'共'+item.totaltypecount+'件商品,实付:￥'}}</text>
+      </view>
+      <view class='btns'>
+      <!-- hidden='{{item.status===5?true:false}}'  -->
+        <!-- <button class='deleteorder' hidden='{{item.status===4|| item.status===5 ||item.status===7?false:true}}' data-id='{{item.custgoodsorderid}}' catchtap='again'>再次购买</button> -->
+        <button class='deleteorder' hidden='{{item.status===4?false:true}}' data-id='{{item}}' catchtap='deleteoder'>删除订单</button>
+        <button class='deleteorder' hidden='{{item.status===1?false:true}}' data-id='{{item.custgoodsorderid}}' catchtap='payment'>去付款</button>
+        <button class='deleteorder' hidden='{{item.status===1?false:true}}' data-id='{{item}}' catchtap='cancel'>取消订单</button>
+        <button class='deleteorder' hidden='{{item.status===2 || item.status===3 || item.status===8 || item.status===9 ?false:true}}' data-id='{{item}}' catchtap='confirm'>确认收货</button>
+
+      </view>
+
+    </view>
+    <text class='hr'></text>
+
+  </view>
+  <view class='redyouzi' bindtap='redyouzi'>
+  <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+  红柚子科技技术支持
+</view>
+  <view wx:if='{{orderlists.length==0}}' class='blank'>
+  <image src='/assests/icon/odersimg/icon_wudingdan@2x.png'></image>
+  <view>当前暂无相关订单</view>
+</view>
+
+</view>

@@ -1,0 +1,73 @@
+/* pages/tuijian/tuijian.wxss */
+ .hot-view{
+   width: 100%;
+   min-height: 100%;
+   background: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  background: #f7f7f7;
+}
+.redyouzi{
+  bottom: -100rpx;
+}
+.flex-img{
+ width: 370rpx;
+ margin-bottom: 10rpx;
+ padding-bottom: 20rpx;
+ background: #fff;
+}
+.flex-img image{
+ width: 370rpx;
+ height: 138px !important;
+}
+.noflex{
+  clear: both;
+  display: block;
+  margin-top: 10rpx;
+  text-align: left;
+  height: 136rpx;
+  padding-left: 25rpx;
+  position: relative;
+}
+.noflex .price{
+  margin-top: 10rpx;
+  position: absolute;
+  bottom: 14rpx;
+  /* font-weight: 600; */
+   font-family: Arial;
+  font-size: 34rpx;
+  color: #fb6d07;
+}
+.sellprice{
+  font-weight: 600
+}
+.goodsname{
+  font-size: 28rpx;
+  color: #333;
+    height:78rpx;
+  display:inline-block;
+  width:290rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.marketprice{
+  font-size: 24rpx;
+  color: #888;
+  font-family: Arial;
+  text-decoration: line-through;
+}
+button{
+  width: 330rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  background: #fb6d07;
+  color: #fff;
+  font-size: 24rpx;
+  margin: auto;
+}

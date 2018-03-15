@@ -1,0 +1,35 @@
+<!--pages/receiveaddress/receiveaddress.wxml-->
+<import src="../../model/model.wxml"/>
+<import src="../../component/toastHi/toastHi.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<template is="areaData" data="{{...item}}"/>
+<view class='wrap-view'>
+<form bindsubmit="formSubmit">
+  <view class='addressinfo'>
+    <view class='nameinfo'>
+      <text class='nametip'>收货人</text>
+      <input class='name' type="text" placeholder='请输入您的姓名' name='receivername' value='{{receivername}}'/>
+    </view>
+    <view class='nameinfo'>
+      <text class='nametip'>联系电话</text>
+     <input class='name' type="number" name='mobile' placeholder='请输入您的联系电话' maxlength='11' value='{{mobile}}'/>
+    </view>
+    <view class='nameinfo' bindtap="translate">
+      <text class='nametip'>收货地址</text>
+      <text class='name infoText'>{{province}} {{city}} {{county}}</text>
+      <image class='moreicon' src='/assests/icon/me/icon_gengduo@2x.png'></image> 
+    </view>
+    <view class='detailaddress'>
+      <text class='detailaddresstip'>详细地址</text>
+      <textarea class='detailaddressinfo' name='address' auto-height placeholder="请输入详细地址..."value='{{address}}' /> 
+    </view>
+  </view>
+  <button class='footerbar' formType="submit"> 
+    保存
+  </button>
+  </form>
+</view>
+<view class='redyouzi' bindtap='redyouzi'>
+    <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+    红柚子科技技术支持
+  </view>

@@ -1,0 +1,50 @@
+/**app.wxss**/
+@import "/wxParse/wxParse.wxss";
+@import "/component/toastHi/toastHi.wxss"; 
+.container {
+  font-family: Microsoft YaHei;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #ffffff;
+  font-size: 14px;
+  color: #333;
+} 
+.title{
+  font-size: 16px;
+  color: #FB6D07;
+}
+.price,.fuhao{
+  font-family: ArialMT;
+  font-size: 34rpx;
+  color: #fb6d07;
+  margin-top: 22rpx;
+  font-weight: 500;
+}
+.fuhao{
+  font-size: 30rpx;
+}
+.redyouzi{
+  display: flex;
+  height: 100rpx;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  position: absolute;
+  bottom: 0;
+}
+.redyouzi image{
+  width: 33rpx;
+  height: 44rpx;
+  margin-right: 20rpx;
+}
+page{
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  background: #f7f7f7;
+}

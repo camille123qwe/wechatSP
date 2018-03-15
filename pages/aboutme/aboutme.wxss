@@ -1,0 +1,49 @@
+/* pages/aboutme/aboutme.wxss */
+text{
+  display: block;
+}
+.wrap-view{
+  border-top: 1rpx solid #dddddd;
+}
+.logo{
+  margin: 70rpx auto 0rpx;
+  width: 120rpx;
+  height: 120rpx;
+  display: block;
+}
+.diancall{
+  width: 100%;
+  text-align: center;
+  font-size: 36rpx;
+  color: #333333;
+  margin-top: 34rpx;
+}
+.slogan{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 32rpx;
+}
+.thin-hr{
+  width: 80%;
+  height: 1rpx;
+  text-align: center;
+  background: #dddddd;
+  margin: auto;
+  margin-top: 62rpx;
+}
+.tip{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333333;
+  margin-top: 60rpx;
+}
+.url{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 22rpx;
+}

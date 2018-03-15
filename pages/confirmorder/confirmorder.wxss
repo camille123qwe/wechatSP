@@ -1,0 +1,282 @@
+/* pages/confirmorder/confirmorder.wxss */
+.goodlistwrap{
+  border-bottom: 2rpx solid #ddd;
+}
+.wrap-view {
+  background: #f7f7f7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.redyouzi{
+  bottom:-100rpx;
+}
+
+.tishi{
+  border-top: 1px solid #ddd;
+  height:80rpx;
+  background:#fff;
+  display:flex;
+  align-items:center;
+}
+.addresstishi{
+  font-size: 28rpx;
+  color: #333;
+  height: 100%;
+  line-height: 80rpx;
+  width: 100%;
+  display: inline-block;
+  margin-left: 20rpx;
+ 
+}
+.header {
+  height: 142rpx;
+  width: 100%;
+  background: #fff;
+  border-bottom: 10rpx solid #fb6d07;
+  border-top: 1rpx solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.loctionicon {
+  height: 32rpx;
+  width: 24rpx;
+  margin-left: 20rpx; 
+}
+
+.detailinfoview {
+  width: 85%;
+  height: 100%;
+  margin-left: 20rpx;
+}
+
+.ordername {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 900;
+  display: inline-block;
+  margin-top: 30rpx; 
+}
+
+.phonenumber {
+  margin-left: 76rpx;
+}
+
+.addressdetail {
+  font-size: 28rpx;
+  color: #333;
+  height: 38rpx;
+  width: 100%;
+  margin-top: 12rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+
+.rightarrow {
+  height: 22rpx;
+  width: 13rpx;
+  float: right;
+  margin-right: 22rpx;
+  right: 22rpx;
+}
+
+.shorelist {
+  background-color: #fff;
+  /* margin-bottom: 20rpx;  *//* margin-left: 20rpx; */
+}
+
+.left {
+  margin-left: 20rpx;
+}
+
+.shoreheader {
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 20rpx solid #f7f7f7;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.storeicon {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 28rpx;
+}
+
+.storename {
+  font-size: 24rpx;
+  color: #333;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+}
+
+.orderstatustext {
+  color: #fb6d07;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+  width: 380rpx;
+  text-align: right;
+}
+
+.goodlist {
+  display: flex;
+  align-items: center;
+  height: 190rpx;
+  width: 100%;
+  /* border-top: 1rpx solid #eaeaea; */
+}
+
+.goodimage {
+  width: 205rpx;
+  height: 152rpx;
+  margin-left: 0rpx;
+  /* margin-left: 20rpx; */
+}
+
+.goodinfo {
+  margin-left: 24rpx;
+  width: 480rpx;
+  height: 190rpx;
+}
+
+.goodname {
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 16rpx;
+  display: block;
+  height: 70rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.goodstandard {
+  font-size: 24rpx;
+  color: #888;
+  margin-top: 12rpx;
+  width: 100%;
+  height: 32rpx;
+  display: block;
+}
+
+.salecount {
+  margin-right: 0rpx;
+  /* width: 20%; */
+  height: 32rpx;
+  /* display: inline-block; */
+  float: right;
+}
+
+.goodprice {
+  font-size: 30rpx;
+  color: #fb6d07;
+  height: 40rpx;
+}
+
+.symbol {
+  font-size: 22rpx;
+}
+
+.orderprice {
+  font-size: 30rpx;
+  float: right;
+  margin-top: -6rpx;
+}
+
+.hr-thin {
+  display: block;
+  width: 100%;
+  height: 1rpx;
+  background: #ddd;
+  margin-left: 20rpx;
+}
+
+.deleteorder {
+  width: 200rpx;
+  height: 66rpx;
+  color: #666;
+  font-size: 26rpx;
+  text-align: center;
+  background-color: #fff;
+  border-color: #8a8a8a;
+  margin: 10rpx 20rpx 10rpx auto;
+}
+
+.orderinfo {
+  height: 90rpx;
+  width: 100%;
+  /* padding-bottom: 20rpx; */
+  background: #fff;
+  /* border-bottom: 1rpx solid #dddddd;  */
+}
+
+.orderinfotip {
+  font-size: 22rpx;
+  color: #333;
+  /* display: inline-block; */
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-right: 20rpx;
+  display: block;
+  text-align: right;
+  /* border-top: 1px solid #eaeaea; */
+}
+
+.symbol {
+  color: #fb6d07;
+}
+
+.pricenumber {
+  font-size: 34rpx;
+  color: #fb6d07;
+}
+
+.buyersupplement {
+  margin-top: 20rpx;
+  height: 102rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.buyersupplementtext {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #333;
+  width: 150rpx;
+  height: 102rpx;
+  line-height: 102rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+
+.buyerinput {
+  font-size: 28rpx;
+  color: #888;
+  display: inline-block;
+  height: 102rpx;
+  width: 77%;
+  line-height: 102rpx;
+}
+
+.footer {
+  height: 92rpx;
+  margin: 0rpx 20rpx;
+  width: 710rpx;
+  background: #fff;
+  position: absolute;
+  bottom: 30rpx;
+}
+
+.wechatpay {
+  background: #1aad19;
+  height: 92rpx;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 92rpx;
+}

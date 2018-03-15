@@ -1,0 +1,65 @@
+/* pages/category/category.wxss */
+.category{
+  width: 100%;
+  min-height: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #f7f7f7;
+  border-top: solid 1rpx #ddd; 
+}
+.redyouzi{
+  bottom: -100rpx;
+}
+.category-wrap{
+  flex: 0 0 auto;
+}
+.category-item{
+  width: 160rpx;
+  height: 106rpx;
+  background: #f7f7f7;
+  text-align: center;
+  font-size: 26rpx;
+  color: #333;
+  display: table;
+}
+.category-item text{
+  display: table-cell;
+  vertical-align: middle;
+  width: 120rpx;
+  padding: 10rpx 20rpx;
+}
+.goods-detail{
+  width: 566rpx;
+  height: 202rpx;
+  display: flex;
+  border-top: solid 1rpx #ddd;
+  background: #fff;
+  padding-left: 24rpx;
+}
+.goods-detail:first-child{
+  border-top: none;
+}
+.goods-image{
+  margin: 25rpx 20rpx 0 0;
+  width: 205rpx;
+  height: 152rpx;
+}
+.goods-image image{
+  width: 205rpx;
+  height: 152rpx;
+}
+.goods-info{
+  margin-top: 30rpx;
+  width: 290rpx;
+ flex: 0 0 auto;
+}
+.goods-name{
+  margin-bottom: 30rpx;
+       width:320rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

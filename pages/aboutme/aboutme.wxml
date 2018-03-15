@@ -1,0 +1,13 @@
+<!--pages/aboutme/aboutme.wxml-->
+<view class='wrap-view'>
+  <image class='logo' src='/assests/icon/icon_LOGO@2x.png' ></image>
+  <text class='diancall'>店呼</text>
+  <text class='slogan'>让消费更放心</text>
+  <view class='thin-hr'></view>
+  <text class='tip'>详情参阅公司官网</text>
+  <text class='url'>www.diancall.com </text>
+</view>
+<view class='redyouzi' bindtap='redyouzi'>
+    <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+    红柚子科技技术支持
+  </view>

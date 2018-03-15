@@ -1,0 +1,52 @@
+<!--pages/addrlist/addrlist.wxml-->
+<import src="../../component/toastHi/toastHi.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<view class='addrlist'>
+  <block wx:if="{{addrArr.length>0}}">
+    <view class='addr-item' wx:for="{{addrArr}}">
+      <view class='contact-info'>
+        <text class='name'>{{item.receivername}}</text>
+        <text class='phone'>{{item.mobile}}</text>
+      </view>
+      <view class='addr-info'>
+        {{item.address}}
+      </view>
+      <view class='set-wrap'>
+        <view class='radio' bindtap='checkAddr' data-addrid='{{item.custshippingaddressid}}'>
+          <image src="{{item.custshippingaddressid==currentId?checked:uncheck}}" class='radioimg'></image>
+          <text>{{item.custshippingaddressid==currentId?"默认地址":"设为默认"}}</text>
+        </view>
+        <view class='edit' bindtap='edit' data-addrid='{{item.custshippingaddressid}}'>
+          <image src='{{edit}}' class='editimg'></image>
+          <text>编辑</text>
+        </view>
+        <view class='delete' bindtap='delete' data-addrid='{{item.custshippingaddressid}}'>
+          <image src='{{dele}}' class='deleimg'></image>
+          <text>删除</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='blank'>
+      <view class='blank-wrap'>
+        <image src='{{infoimg}}'></image>
+        <view class='big-text'>当前暂无详细地址</view>
+        <view class='small-text'>请点击下方按钮新增</view>
+      </view>
+    </view>
+  </block>
+</view>
+<view class='footer' bindtap='addAddr' wx:if="{{addrArr.length==0}}">
+  新增地址
+</view>
+<view class='footeradd' wx:else bindtap='addAddr'>新增地址</view>
+
+<!--弹出框-->
+<modal hidden="{{hiddenModal}}" confirm-text="确定" cancel-text="取消" bindconfirm="listenerConfirm" bindcancel="listenerCancel">
+  您确定真的要删除此地址？
+</modal>
+<view class='redyouzi' bindtap='redyouzi'>
+    <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+    红柚子科技技术支持
+  </view>

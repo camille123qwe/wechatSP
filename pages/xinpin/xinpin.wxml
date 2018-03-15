@@ -1,0 +1,20 @@
+<!--pages/xinpin/xinpin.wxml-->
+<view class="hot-view">
+  <view class='flex-img' wx:for="{{goodslist}}" wx:key="goodsname" bindtap="goodsDetail" data-goods="{{item}}">
+    <image src="{{item.goodsface}}" mode='widthFix' binderror="errorFunction" data-errorimg="{{index}}"></image>
+    <view class='noflex'>
+      <text class='goodsname'>{{item.goodsname}}</text>
+      <view class='price'>
+        <view>
+          <text class='fuhao'>￥</text>{{item.sellprice>0?item.sellprice/100:"待定"}}
+        </view>
+        <button>购买</button>
+      </view>
+    </view>
+  </view>
+
+</view>
+  <view class='redyouzi' bindtap='redyouzi'>
+    <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+    红柚子科技技术支持
+  </view>

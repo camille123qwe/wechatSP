@@ -1,0 +1,151 @@
+/* pages/payscussess/payscussess.wxss */
+.info-tittle{
+  width: 100%;
+  height: 140rpx;
+  line-height: 140rpx;
+  text-align: center;
+  background: #fb6d07;
+}
+.tet-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.tittle-img{
+ width: 40rpx;
+  height: 40rpx;
+  margin-right: 14rpx;
+}
+
+.tit-text{
+  font-size: 30rpx;
+  color: #fff;
+}
+.address {
+  width: 100%;
+  height: 354rpx;
+  border-bottom: 2rpx solid #ddd;
+
+}
+
+.address-icon {
+  width: 60rpx;
+  height: 100%;
+  float: left;
+  line-height: 150rpx;
+  margin-left: 20rpx;
+}
+
+.ioc-img {
+  width: 30rpx;
+  height: 40rpx;
+}
+.address-left {
+  padding: 24rpx 34rpx 14rpx 20rpx;
+  font-size: 24rpx;
+  color: #333;
+  background: #fff;
+    display: flex;
+  align-items: center;
+  border-bottom: solid 1rpx #ddd;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.address-left>view{
+  width: 100%;
+  text-align: left;
+}
+.merchname{
+  margin-bottom: 10rpx;
+}
+.dinfo{
+  height: 220rpx;
+  font-size: 26rpx;
+  padding: 28rpx 20rpx;
+  background: #fff;
+}
+.money{
+  color: #fb6d07;
+  font-size: 34rpx;
+  font-family: Arial;
+}
+.fuhao{
+  font-size: 22rpx;
+}
+.hot-wrap{
+  width: 100%;
+  text-align: center;
+}
+.hot-title{
+  height: 98rpx;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  background: #f7f7f7;
+}
+.hot-title image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.hot-title text{
+  font-size: 26rpx;
+  color: #fb6d07;
+  padding-left: 14rpx; 
+}
+.hot-view{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.flex-img{
+ width: 370rpx;
+ margin-bottom: 10rpx;
+ background: #fff;
+}
+.flex-img image{
+ width: 370rpx;
+ min-height: 138px;
+}
+.noflex{
+  clear: both;
+  display: block;
+  margin-top: 10rpx;
+  text-align: left;
+  height: 136rpx;
+  padding-left: 25rpx;
+  position: relative;
+}
+.noflex .price{
+  margin-top: 10rpx;
+  position: absolute;
+  bottom: 10rpx;
+  font-weight: 600;
+   font-family: Arial;
+  font-size: 34rpx;
+  color: #fb6d07;
+}
+.goodsname{
+  font-size: 26rpx;
+  color: #333;
+}
+.button-wrap{
+  padding: 56rpx 0 35rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-wrap button{
+  width: 270rpx;
+  height: 70rpx;
+  background: #fff;
+  border: solid 1rpx #999;
+  border-radius: 20rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.redyouzi{
+  bottom: -100rpx;
+}

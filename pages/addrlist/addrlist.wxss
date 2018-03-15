@@ -1,0 +1,142 @@
+/* pages/addrlist/addrlist.wxss */
+.addrlist{
+  justify-content: flex-start;
+  flex-wrap:row; 
+  background: #f7f7f7;
+  border-top: solid 1rpx #ddd;
+  font-size: 24rpx;
+  color: #666;
+  width: 100%;
+  min-height: 100%;
+  font-family: "Microsoft YaHei";  
+}
+page{
+  padding-bottom: 100rpx;
+}
+.redyouzi{
+  bottom: 100rpx;
+}
+.addr-item{
+  width: 100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+.addr-item:last-child{
+  margin-bottom: 98rpx!important;
+}
+.addr-info{
+  margin: 0 20rpx;
+}
+.name{
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.phone{
+  font-family: ArialMT;
+}
+.contact-info{
+  margin:30rpx 0 24rpx 20rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.set-wrap{
+  height: 84rpx;
+  margin-top: 25rpx;
+  border-top: solid 1rpx #ddd;
+  padding: 0rpx 20rpx;
+  display:-moz-box;
+  display:-webkit-box;
+  display:box;
+}
+.radioimg{
+ width: 36rpx;
+  height: 36rpx;
+}
+.radio{
+  display: flex;
+  -moz-box-flex:7.0;
+  -webkit-box-flex:7.0; 
+}
+.radio text{
+  margin-left: 20rpx;
+}
+.radio,.edit,.delete{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.editimg{
+  width: 28rpx;
+  height: 30rpx;
+}
+.edit{
+  display: flex;
+  -moz-box-flex:1.0;
+  -webkit-box-flex:1.0; 
+}
+.edit text{
+  margin-left: 16rpx;
+}
+.deleimg{
+  width: 26rpx;
+  height: 30rpx;
+}
+.dele{
+   display: flex;
+  -moz-box-flex:1.0;
+  -webkit-box-flex:1.0; 
+}
+.delete text{
+  margin-left: 16rpx;
+}
+.footer{
+  width: 100%;
+  height: 96rpx;
+  color: #fb6d07;
+  text-align: center;
+  line-height: 96rpx;
+  border-top: solid 1px #ddd;
+  position: absolute;
+  bottom: 0;
+  font-size: 30rpx;
+  background: #fff;
+}
+.footeradd{
+ width: 100%;
+  height: 96rpx;
+  color: #fb6d07;
+  text-align: center;
+  line-height: 96rpx;
+  border-top: solid 1px #ddd;
+  position: fixed;
+  bottom: 0;
+  font-size: 30rpx;
+  background: #fff;
+  z-index: 2;
+}
+.blank{
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+.blank-wrap{
+    display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+  margin-top: 238rpx;
+}
+.blank image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.big-text{
+  font-size: 30rpx;
+  color: #666;
+  margin: 52rpx 0 20rpx 0;
+}
+.small-text{
+  color: #888;
+}

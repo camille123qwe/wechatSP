@@ -1,0 +1,123 @@
+/* pages/search/search.wxss */
+.container{
+  background: #fff;
+}
+.search-fix{
+  font-family: MicrosoftYaHei;
+  width: 100%;
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 28rpx;
+}
+.search-fix image{
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  left: 40rpx;
+  top: 14rpx;
+}
+.input-search{
+  width: 525rpx;
+  background: #f1f1f1;
+  margin: 0 20rpx;
+  border-radius: 10rpx;
+  height: 60rpx;
+  padding-left:65rpx;
+  line-height: 60rpx;
+  color: #999;
+}
+.quxiao{
+  position:absolute;
+  right:42rpx;
+  top:0;
+  height:60rpx;
+  width:100rpx;
+  line-height: 60rpx;
+  text-align: right;
+}
+.lishi{
+  border-top: solid 1rpx #ddd;
+  width: 100%;
+}
+.lishi-title{
+  position: relative;
+  margin: 38rpx 40rpx 28rpx 20rpx;
+}
+.title{
+  float: left;
+  font-size: 28rpx;
+  color: #333;
+}
+.clear{
+  float: right;
+  font-size: 24rpx;
+  color: #fb6d07;
+}
+.lishi-content{
+  margin: 100rpx 40rpx 28rpx 20rpx;
+  display: flex;
+  flex-flow: row wrap;
+}
+.lishi-content view{
+  display: inline-block;
+  padding: 0 30rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  background: #f1f1f1;
+  margin: 0 18rpx 18rpx 0;
+  border-radius: 10rpx;
+}
+.goods-detail{
+  width: 100%;
+  height: 224rpx;
+  display: flex;
+  border-top: solid 1rpx #ddd;
+  background: #fff;
+  padding:0 20rpx;
+  position: relative;
+}
+.goods-detail:last-child{
+  border-bottom: solid 1rpx #ddd;
+}
+
+.goods-image{
+  margin: 12rpx 28rpx 12rpx 0;
+  width: 260rpx;
+  height: 200rpx;
+}
+.goods-image image{
+  width: 260rpx;
+  height: 200rpx;
+}
+.goods-info{
+  margin-top: 30rpx;
+  width: 290rpx;
+ flex: 0 0 auto;
+ position: relative;
+}
+.goods-name{
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+}
+.price{
+  font-size: 36rpx;
+  font-family: Arial;
+  color: #fb3b07;
+  position: absolute;
+  bottom: 20rpx;
+}
+.desc{
+  font-size: 26rpx;
+  color: #888;
+}
+.price .fuhao{
+  font-size: 22rpx;
+  color: #fb3b07;
+  font-family: Arial;
+}
+.marketprice{
+  font-size: 24rpx;
+  color: #888;
+  font-family: Arial;
+  text-decoration: line-through;
+}

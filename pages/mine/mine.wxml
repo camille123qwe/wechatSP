@@ -1,0 +1,92 @@
+<!--pages/mine/mine.wxml-->
+<!--头像和名称  -->
+<!--    wd_bg_imge@2x.png  -->
+<view class='mine-wrap'>
+<view class='userinfo' bindtap='test'> 
+<image class='bgimg' src='/assests/icon/me/wd_bg_imge@2x.png' mode='widthfit'></image>
+  <view class='user'>
+    <image class='userinfo-avatar' src='{{userInfo.avatarUrl}}'></image>
+  </view>
+   <text class='userinfo-name'>{{userInfo.nickName}}</text> 
+</view>
+
+<!--订单和物流  -->
+<view class='myorder' bindtap='goorder'>
+
+  <view class='partone' >
+     <image class='myordericon' src='/assests/icon/me/icon_wodedingdan@2x.png'></image> 
+    <text class='myordertip'>我的订单</text>
+  </view>
+
+  <view class='parttwo'>
+    <text class='allorder'>查看全部订单</text>
+    <image class='more' src='/assests/icon/me/icon_gengduo@2x.png'></image>
+  </view> 
+</view>
+
+<view class='tradeinfo'>
+  <view class='tradeitem' wx:for="{{orderarrs}}">
+    <view class='align-item' data-id='{{item.id}}'  bindtap='gonextorder'>
+      <image class='tradeicon' src='{{item.iconurl}}'> </image>
+      <text class='tradetext'>{{item.text}}</text>
+    </view>
+  </view>
+   <!-- <view class='tradeitem'>
+    <view class='align-item'>
+      <image class='tradeicon' src='/assests/icon/me/icon_daifahuo@2x.png'> </image>
+      <text class='tradetext'>代发货</text>
+    </view>
+  </view>
+  <view class='tradeitem'>
+    <view class='align-item'>
+      <image class='tradeicon' src='/assests/icon/me/icon_daishouhuo@2x.png'> </image>
+      <text class='tradetext'>待收货</text>
+    </view>
+  </view>
+  <view class='tradeitem'>
+    <view class='align-item'>
+      <image class='tradeicon' src='/assests/icon/me/icon_yiwancheng@2x.png'> </image>
+      <text class='tradetext'>已完成</text>
+    </view>
+  </view>  -->
+</view>
+
+<!--购物车、收藏、地址、关于我们  -->
+<view class='myshoppingcar' bindtap='nextPage' data-pagekey="{{'shoppingcar'}}">
+  <image class='myshoppingcaricon' class='myshoppingcariconunique' src='/assests/icon/me/icon_wodegouwuche@2x.png'></image>
+  <text class='myshoppingcartip'>我的购物车</text>
+  <image class='myshoppingcarmore' src='/assests/icon/me/icon_gengduo@2x.png'></image>
+</view>
+
+
+<view class='collectionlist'>
+  <view class='mycollection' wx:for="{{mylist}}" wx:key="url" bindtap='nextPage' data-pagekey='{{item.pagekey}}'>
+    <image class='myshoppingcaricon' src='{{item.iconurl}}'></image>
+    <text class='myshoppingcartip'>{{item.text}}</text>
+    <image class='myshoppingcarmore' src='{{item.moreurl}}'></image> 
+  </view>
+   <view class='mycollection kefu'>
+    <contact-button type="default-light" size="40" session-from="weapp" style='left:0'>
+        </contact-button>
+         <contact-button type="default-light" size="40" session-from="weapp"  style='left:27rpx'>
+        </contact-button>
+         <contact-button type="default-light" size="40" session-from="weapp"  style='left:54rpx'>
+        </contact-button>
+         <contact-button type="default-light" size="40" session-from="weapp" style='right:54rpx'>
+        </contact-button>
+         <contact-button type="default-light" size="40" session-from="weapp" style='right:27rpx'>
+        </contact-button>
+         <contact-button type="default-light" size="40" session-from="weapp"  style='right:0'>
+        </contact-button>
+    <image class='myshoppingcaricon' src='/assests/icon/goodsdetail/icon_kefu@2x.png'></image>
+    <text class='myshoppingcartip'>联系客服</text>
+    <image class='myshoppingcarmore' src='/assests/icon/me/icon_gengduo@2x.png'></image> 
+  </view>
+</view>
+</view>
+<view class='redyouzi' bindtap='redyouzi'>
+  <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+  红柚子科技技术支持
+</view>
+
+

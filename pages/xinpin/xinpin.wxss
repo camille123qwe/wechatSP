@@ -1,0 +1,72 @@
+/* pages/tuijian/tuijian.wxss */
+ .hot-view{
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+page{
+  padding-bottom: 100rpx;
+}
+.redyouzi{
+  bottom: 0;
+}
+.flex-img{
+ width: 370rpx;
+ margin-bottom: 10rpx;
+ padding-bottom: 6rpx;
+ background: #fff;
+}
+.flex-img image{
+ width: 370rpx;
+ min-height: 138px;
+}
+.noflex{
+  clear: both;
+  display: block;
+  margin-top: 10rpx;
+  text-align: left;
+  height: 136rpx;
+  padding-left: 25rpx;
+  position: relative;
+}
+.noflex .price{
+  margin-top: 10rpx;
+  position: absolute;
+  bottom: 10rpx;
+  font-weight: 600;
+   font-family: Arial;
+  font-size: 34rpx;
+  color: #fb6d07;
+}
+.goodsname{
+  font-size: 26rpx;
+  color: #333;
+  height:74rpx;
+  display:inline-block;
+  width:290rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.price{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+button{
+  width: 120rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  background: #fb6d07;
+  color: #fff;
+  font-size: 24rpx;
+  position: absolute;
+  right: 35rpx;
+}

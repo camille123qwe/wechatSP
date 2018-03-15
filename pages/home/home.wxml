@@ -1,0 +1,64 @@
+<!--pages/shouye/shouye.wxml-->
+<!-- <scroll-view scroll-y="true" bindscrolltolower="searchScrollLower"> -->
+<view class='search-fix' bindtap='searchPage'>
+  <image src='{{sousuoicon}}'></image>
+  <view class='input-search' type='text' confirm-type='search'>{{searchPlaceholder}}</view>
+  <button type='default' class='nav-cart'></button>
+</view>
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular="true">
+  <block wx:for="{{banners}}" wx:for-index="index" wx:key="*this">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" 
+       binderror="errorbanner" data-errorimg="{{index}}"
+      mode="aspectFill" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='container'>
+  <view class='nav-bar'>
+    <view class='flex-item' bindtap='nextPage' data-pagekey='miaosha'>
+      <view class='align-item'>
+        <image class='nav-circle' src='{{xianshi}}'></image>
+        <text>限时秒杀</text>
+      </view>
+    </view>
+    <view class='flex-item' bindtap='nextPage' data-pagekey='tuijian'>
+      <view class='align-item'>
+        <image class='nav-circle' src='{{tuijian}}'></image>
+        <text>店长推荐</text>
+      </view>
+    </view>
+    <view class='flex-item' bindtap='nextPage' data-pagekey='xinpin'>
+      <view class='align-item'>
+        <image class='nav-circle' src='{{xinpin}}'></image>
+        <text>新品上市</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='hot-wrap'>
+    <view class='hot-title'>
+      <image src='{{remaiicon}}'></image>
+      <text>热卖商品</text>
+    </view>
+    
+      <view class="hot-view">
+        <view class='flex-img' wx:for="{{goodslist}}" wx:key="goodsname" bindtap="goodsDetail" data-goods="{{item}}">
+          <image src="{{item.goodsface}}" mode='widthFix' binderror="errorFunction" data-errorimg="{{index}}"></image>
+          <view class='noflex'>
+            <text class='goodsname'>{{item.goodsname}}</text>
+            <view class='price'>
+              <text class='fuhao'>￥</text>{{item.sellprice>0?item.sellprice/100:"待定"}}</view>
+          </view>
+        </view>
+
+      </view>
+    
+  </view>
+</view>
+<view class='redyouzi' bindtap='redyouzi'>
+  <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+  红柚子科技技术支持
+</view>
+<!-- <view class="loading complete" hidden="{{false}}">已加载全部</view>  
+</scroll-view> -->

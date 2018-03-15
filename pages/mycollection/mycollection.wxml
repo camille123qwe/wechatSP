@@ -1,0 +1,42 @@
+<!--pages/mycollection/mycollection.wxml-->
+<view class='wrap-view' hidden="{{collectionlist.length<=0?true:false}}">
+  <view class='header'>
+    <text class='colletioncount'>共 <text class='goodcount'>{{collectionlist.length}}</text> 件商品</text>
+    <text class='edit' bindtap='edittap'>编辑</text>
+  </view>
+  <view class='collectionlistwrap'>
+    <view class='collectionlist' bindtouchstart="touchS"  data-index="{{index}}" wx:for="{{collectionlist}}" wx:key="{{index}}">
+      <view class='goodall' bindtap='goodsDetail' data-goods='{{item}}' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" 
+      data-index="{{index}}" style="left:{{item.left + 'rpx'}}">
+        <view>
+          <image class='goodselecticon' hidden='{{noEditing}}' src="{{allcheck||item.selected?Checked:Uncheck}}" mode='scaleToFill' bindtap='goodselect' data-index='{{index}}'></image>
+        </view>
+             <image class='goodimage' wx:if='{{item.goodsInfo.goodsface}}' src="{{item.goodsInfo.goodsface}}" binderror="errorFunction" data-errorimg="{{index}}"></image>
+        <view class='goodinfo'>
+          <text class='goodname'>{{item.goodsInfo.goodsname}}</text>
+          <text class='goodprice'><text class='symbol'>￥</text>{{item.goodsInfo.sellprice/100}}</text>
+        </view>
+      </view>
+       <view class="item-oper">
+          <view class="oper-delete" bindtap="itemDelete" data-index="{{index}}">删除</view>
+        </view>
+      <!-- <view data-index="{{index}}" bindtap="delItem" class="inner del">删除</view> -->
+    </view>
+  </view>
+</view>
+
+<view class='footer' hidden='{{noEditing}}'>
+  <image class='allselecticon' src='{{allcheck?Checked:Uncheck}}' bindtap='seleAll'></image>
+  <text class='allselecttext'>全选</text>
+  <button class='account' bindtap='remove'>删除</button>
+</view>
+<view class='redyouzi' bindtap='redyouzi'>
+    <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+    红柚子科技技术支持
+  </view>
+   <view class='defaultview' hidden="{{collectionlist.length>0?true:false}}">
+  <image class='defaultimage' src='/assests/icon/icon_wushoucang@2x.png'></image>
+
+    <text class='defaulttext'>您还没有收藏商品</text>
+
+</view>

@@ -1,0 +1,337 @@
+.info-tittle{
+  width: 100%;
+  height: 140rpx;
+  line-height: 140rpx;
+  text-align: center;
+  background: #fb6d07;
+}
+.redyouzi{
+  bottom: -100rpx;
+}
+.tet-box{
+  display: inline-block;
+}
+.tittle-img{
+  display: inline-block;
+ width: 40rpx;
+  height: 40rpx;
+  margin-top: 53rpx;
+  margin-right: 14rpx;
+}
+
+.tit-text{
+  font-size: 30rpx;
+  color: #fff;
+}
+.address {
+  width: 100%;
+  height: 150rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.address-icon {
+  width: 60rpx;
+  height: 100%;
+  float: left;
+  line-height: 150rpx;
+  margin-left: 20rpx;
+}
+
+.ioc-img {
+  width: 30rpx;
+  height: 40rpx;
+}
+
+.address-left {
+  width: 80%;
+  float: left;
+}
+
+.info {
+  color: #333;
+  display: inline-block;
+}
+
+.merchname {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+
+.phonenum {
+  font-size: 30rpx;
+  /* float: right; */
+  margin-left: 40rpx;
+}
+
+.address-info {
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  color: #888;
+}
+
+.message {
+  width: 100%;
+  height: 114rpx;
+}
+
+.message-icon {
+  width: 60rpx;
+  height: 100%;
+  float: left;
+  line-height: 110rpx;
+  margin-left: 20rpx;
+}
+
+.tit-info {
+  width: 80%;
+  height: 100%;
+  float: left;
+}
+
+.message-tit {
+  width: 80%;
+  height: 40rpx;
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 15rpx;
+}
+
+.message-info {
+  width: 80%;
+  height: 40rpx;
+  display: block;
+  font-size: 28rpx;
+  color: #888;
+}
+
+.hr {
+  width: 100%;
+  height: 20rpx;
+  display: block;
+  background: #f7f7f7;
+}
+
+.store {
+  width: 100%;
+  height: 78rpx;
+}
+
+.store-icon {
+  width: 60rpx;
+  height: 100%;
+  float: left;
+  line-height: 78rpx;
+  margin-left: 20rpx;
+}
+
+.storename {
+  width: 80%;
+  height: 100%;
+  float: left;
+  line-height: 78rpx;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.shorelist {
+  background-color: #fff;
+}
+
+.left {
+  margin-left: 20rpx;
+}
+
+.shoreheader {
+  height: 80rpx;
+  width: 100%;
+}
+
+.storeicon {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 8rpx;
+  display: inline-block;
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 26rpx;
+}
+
+.storename {
+  font-size: 24rpx;
+  color: #333;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+}
+
+.orderstatustext {
+  display: inline-block;
+  float: right;
+  color: #fb6d07;
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+}
+
+.goodlist {
+  display: flex;
+  align-items: center;
+  height: 190rpx;
+  width: 100%;
+  border-top: 1rpx solid #ddd;
+  /* margin-right: 10rpx; */
+}
+
+.goodimage {
+  width: 205rpx;
+  height: 152rpx;
+  /* margin-left: 20rpx; */
+}
+
+.goodinfo {
+  margin-left: 24rpx;
+  width: 480rpx;
+  height: 190rpx;
+}
+
+.goodname {
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 16rpx;
+  display: block;
+  height: 70rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.goodstandard {
+  display: block;
+  width: 100%;
+  min-height: 36rpx;
+  font-size: 24rpx;
+  color: #888;
+}
+
+.standard-left {
+  display: block;
+  float: left;
+  width: 30%;
+  height: 36rpx;
+}
+
+.salecount {
+  display: inline-block;
+  width: 30rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  float: right;
+  margin-right: 30rpx;
+}
+
+.standard {
+  width: 80%;
+}
+
+.standards {
+  margin-left: 20rpx;
+}
+
+.orderinfo {
+  height: 32rpx;
+  width: 100%;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.orderinfotip, .orderprice {
+  font-size: 22rpx;
+  color: #333;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.orderinfotip {
+  float: right;
+}
+
+.orderprice {
+  display: block !important;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+
+.infact {
+  text-align: right;
+  border-top: 2rpx solid #ddd;
+  padding-right: 20rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.money {
+  font-size: 34rpx;
+  color: #fb6d07;
+}
+.hot-wrap{
+  width: 100%;
+  text-align: center;
+}
+.hot-title{
+  height: 115rpx;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  background: #fff;
+}
+.hot-title image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.hot-title text{
+  font-size: 34rpx;
+  font-weight:bold; 
+  color: #333;
+  padding-left: 14rpx; 
+}
+.hot-view{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.flex-img{
+ width: 370rpx;
+ margin-bottom: 10rpx;
+ background: #fff;
+}
+.flex-img image{
+ width: 370rpx;
+ min-height: 138px;
+}
+.noflex{
+  clear: both;
+  display: block;
+  margin-top: 10rpx;
+  text-align: left;
+  height: 136rpx;
+  padding-left: 25rpx;
+  position: relative;
+}
+.noflex .price{
+  margin-top: 10rpx;
+  position: absolute;
+  bottom: 10rpx;
+  font-weight: 600;
+   font-family: Arial;
+  font-size: 34rpx;
+  color: #fb6d07;
+}
+.goodsname{
+  font-size: 26rpx;
+  color: #333;
+}

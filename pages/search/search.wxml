@@ -1,0 +1,35 @@
+<!--pages/search/search.wxml-->
+<view class='container search-wrap'>
+  <view class='search-fix'>
+    <image src='{{sousuoicon}}'></image>
+    <input class='input-search' type='text' placeholder='请输入您所搜索的商品' confirm-type='search' 
+     bindconfirm="search" value="{{inputVlaue}}"/>
+    <view class='quxiao' bindtap='quxiao'>取消</view>
+  </view>
+  <view class='lishi' hidden='{{!goodsflag||hisArr.length==0}}'>
+    <view class='lishi-title'>
+      <view class='title'>历史搜索</view>
+       <view class='clear' bindtap='clear'>清除</view>
+    </view>
+    <view class='lishi-content'>
+      <view wx:for='{{hisArr}}' bindtap='search' data-keywords='{{item.keywords}}'>{{item.keywords}}</view>
+    </view>
+  </view>
+</view>
+ <view class='goods-wrap' hidden='{{goodsflag}}'>
+    <view class='goods-detail' wx:for="{{goodslist}}" wx:key="goodsid" bindtap='goodsDetail' data-goods='{{item}}'>
+      <view class='goods-image'>
+        <image src='{{globalData.goodsfaceurl_900+item.goodsface}}' mode='scaleToFill'
+        binderror="errorFunction" data-errorimg="{{index}}"></image>
+      </view>
+      <view class='goods-info'>
+        <view class='goods-name'>
+          {{item.goodsname}}
+        </view>
+        <view class='desc'>商品描述</view>
+        <view class='price'>
+          <text class='fuhao'>￥</text>{{item.sellprice>0?item.sellprice/100:"待定"}}
+        </view>
+      </view>
+    </view>
+</view>

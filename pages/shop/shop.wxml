@@ -1,0 +1,32 @@
+<view class='container'>
+  <view class='store_view flex-wrp'>
+    <view class='flex-item'>
+      <image bindtap="preview(item)" class="storeface" src="{{storeinfo.storeface}}" mode='aspectFit'></image>
+    </view>
+    <view class='flex-item storename'>
+        <text>{{storeinfo.storeaddr}}</text>
+        <text class='noflex text_left'>{{opentime}}</text>
+    </view>
+    <view class="icon_img flex-item2" wx:if="{{isfollowed}}" bindtap='toFollow'>
+        <image src='{{followed}}'></image>
+        <P>点击关注</P>
+    </view>
+    <view wx:else class="flex-item2">
+      <ion-icon name="ios-heart" color="orange">
+      </ion-icon>
+      <p>已关注</p>
+    </view>
+  </view>
+  <view class='store_service'>
+    <text class='pleft'>服务</text>
+  </view>
+  <view class='hot_goods'>
+     <text class='pleft bgcolor'>爆款商品</text>
+  </view>
+   <view class="hot_view"> 
+      <view class='flex-img' wx:for="{{goodslist}}" bindtap="">
+        <image src="{{imgurl.goodsfaceurl_900+item.goodsface}}" mode='widthFix'></image>
+        <text class='noflex'>{{item.goodsname}}</text>
+      </view>
+   </view> 
+</view>

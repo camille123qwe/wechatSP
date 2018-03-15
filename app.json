@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/receiveaddress/receiveaddress",
+    "pages/addrlist/addrlist",
+    "pages/category/category",
+    "pages/shop/shop",
+    "pages/logs/logs",
+    "pages/goodsdetail/goodsdetail",
+    "pages/mine/mine",
+    "pages/shoppingcar/shoppingcar",
+    "pages/myorder/myorder",
+    "pages/orderinformation/orderinformation",
+    "pages/confirmorder/confirmorder",
+    "pages/testmodal/testmodal",
+    "pages/miaosha/miaosha",
+    "pages/tuijian/tuijian",
+    "pages/xinpin/xinpin",
+    "pages/search/search",
+    "pages/mycollection/mycollection",
+    "pages/aboutme/aboutme",
+    "pages/bindingphone/bindingphone",
+    "pages/payscussess/payscussess"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "店呼",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#FB6D07",
+    "borderStyle": "#ddd",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assests/icon/icon_shouye_nor@2x.png",
+        "selectedIconPath": "assests/icon/icon_shouye_sel@2x.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "assests/icon/icon_fenlei_nor@2x.png",
+        "selectedIconPath": "assests/icon/icon_fenlei_sel@2x.png"
+      },
+      {
+        "pagePath": "pages/shoppingcar/shoppingcar",
+        "text": "购物车",
+        "iconPath": "assests/icon/icon_gouwuche_nor@2x.png",
+        "selectedIconPath": "assests/icon/icon_gouwuche_sel@2x.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assests/icon/icon_wode_nor@2x.png",
+        "selectedIconPath": "assests/icon/icon_wode_sel@2x.png"
+      }
+    ]
+  }
+}

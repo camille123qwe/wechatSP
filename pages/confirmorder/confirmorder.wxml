@@ -1,0 +1,61 @@
+<!--pages/confirmorder/confirmorder.wxml-->
+<import src="../../component/toastHi/toastHi.wxml" />
+<template is="toast" data="{{ ..._toast_ }}" />
+
+<view class='wrap-view'>
+
+  <view class='tishi' hidden='{{addresShow2}}' bindtap="goaddres">
+    <text class='addresstishi'>前往添加地址</text>
+    <image class='rightarrow' src='/assests/icon/me/icon_gengduo@2x.png'></image>
+  </view>
+
+  <view class='header' hidden='{{addresShow1}}' bindtap="goaddres">
+    <image class='loctionicon' src='/assests/icon/confirmorder/icon_dizhi @2x.png'></image>
+    <view class='detailinfoview'>
+      <text class='ordername'>{{defauladdres.receivername}}<text class='phonenumber'>{{defauladdres.mobile}}</text></text>
+      <text class='addressdetail'>{{defauladdres.address}}</text>
+    </view>
+    <image class='rightarrow' src='/assests/icon/me/icon_gengduo@2x.png'></image>
+  </view>
+
+  <view class='shorelist' bindtap="">
+    <view class='shoreheader'>
+      <image class='storeicon' src='/assests/icon/odersimg/icon_dizhi @2x.png'></image>
+      <text class='storename'>{{ordertitle}}</text>
+    </view>
+
+    <view class='goodlistwrap' wx:for="{{orderlist}}" bindtap="">
+      <view class='goodlist left'>
+        <image class='goodimage left' src='{{img_url}}{{item.custCartGoodsItems.goodsInfo.goodsface}}' mode='scaleToFill'></image>
+        <view class='goodinfo'>
+          <text class='goodname'>{{item.custCartGoodsItems.goodsInfo.goodsname}}</text>
+          <text class='goodstandard'>
+            <text wx:for='{{item.custCartGoodsItems.props}}' wx:for-item="prop">{{prop.valuename}}</text>
+          <text class='salecount'>x{{item.totalcount}}</text>
+          </text>
+          <text class='goodprice'><text class='symbol'>￥</text>{{item.custCartGoodsItems.goodsInfo.sellprice/100}}</text>
+        </view>
+      </view>
+      <!-- <text class='hr-thin'></text> -->
+    </view>
+    <!-- <text class='hr'></text> -->
+  </view>
+
+  <view class='orderinfo'>
+    <text class='orderinfotip'>共2件商品,实付:<text class='symbol'>￥</text>
+    <text class='pricenumber'>{{money/100}}</text></text>
+  </view>
+
+  <view class='buyersupplement'>
+    <text class='buyersupplementtext'>买家留言:</text>
+    <input class='buyerinput' type='text' placeholder='给商家留言' bindinput='putchange' value='{{comment}}'></input>
+  </view>
+
+</view>
+<view class='redyouzi' bindtap='redyouzi'>
+  <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+  红柚子科技技术支持
+</view>
+<view class='footer'>
+  <button class='wechatpay' bindtap='wechatpay'>微信支付</button>
+</view>

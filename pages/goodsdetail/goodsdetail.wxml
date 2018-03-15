@@ -1,0 +1,142 @@
+<!--pages/goodsdetail/goodsdetail.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<import src="../../component/toastHi/toastHi.wxml" />
+<template is="toast" data="{{ ..._toast_ }}" />
+<text class='topbor'></text>
+<view class='container goods-wrap'>
+  <view class='goodsbanner'>
+    <image wx:if='{{globalData.goodsfaceurl_900+goodsinfo.goodsface}}' src='{{goodsinfo.goodsface}}' binderror="errorFace" data-errorimg="{{index}}" mode="scaleToFill" mode='widthfix'></image>
+    <view class="goodsinfo">
+      <view class="goodsname">{{goodsinfo.goodsname}}</view>
+      <view class="price">
+        <text class="sellprice"><text class='fuhao'>￥</text>{{goodsinfo.sellprice/100}}</text>
+        <text class="preprice"><text class='greyfuhao'>￥</text>{{goodsinfo.marketprice/100}}</text>
+      </view>
+    </view>
+    <view class='guige' wx:if='{{guige.length>0}}' bindtap='moreGuige' data-statu="open">
+      <view>
+        <text>选择</text>
+        <text wx:for='{{propstitle}}'>{{item}}</text>
+      </view>
+      <view class='imgbox'>
+        <image wx:if='{{more}}' src='{{more}}' right></image>
+      </view>
+    </view>
+    <view class="product">
+      <view class="ptitle">产品信息</view>
+      <view class='pinfo'>
+        <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
+      </view>
+    </view>
+  </view>
+  <view class='p-wrap'>
+    <view class='grey-title'>
+      <view class='line'></view>
+      <view class='mid-text'>详情</view>
+      <view class='line'></view>
+    </view>
+    <view class='img-wrap'>
+      <view class='orange-line'>商品详情</view>
+      <block wx:for='{{imgarr}}' wx:key="{{index}}">
+        <image wx:if='{{item}}' src='{{item}}' binderror="errorDetail" data-errorimg="{{index}}" mode='widthfix' class='detail-img'></image>
+      </block>
+    </view>
+  </view>
+  <view class='p-wrap mb'>
+    <view class='grey-title'>
+      <view class='line'></view>
+      <view class='mid-text'>推荐</view>
+      <view class='line'></view>
+    </view>
+    <view class='orange-line'>热门商品</view>
+    <view class="hot-view">
+      <view class='flex-img' wx:for="{{hotlist}}" wx:key="goodsname" bindtap="goodsDetail" data-goods="{{item}}">
+        <image wx:if='{{item.goodsface}}' src="{{item.goodsface}}" binderror="errorFunction" data-errorimg="{{index}}" mode='widthFix'></image>
+        <view class='noflex'>
+          <text class='goodsname'>{{item.goodsname}}</text>
+          <view class='price'>
+            <text class='fuhao'>￥</text>{{item.sellprice>0?item.sellprice/100:"待定"}}</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class='footer'>
+    <view class='ficon-wrap'>
+      <view class='f-icon'>
+        <image wx:if='{{kefu}}' src='{{kefu}}'></image>
+        <text class='footsize'>客服</text>
+        <contact-button type="default-light" size="40" session-from="weapp">
+        </contact-button>
+      </view>
+        
+      <view class='f-icon' bindtap='shoucang'>
+        <image wx:if='{{star}}' src='{{isfollow?ystar:star}}'></image>
+        <text class='footsize'>{{isfollow?'已收藏':'收藏'}}</text>
+      </view>
+      <view class='f-icon' bindtap='gouwuche'>
+        <image wx:if='{{car}}' src='{{car}}'></image>
+        <text class='footsize'>购物车</text>
+      </view>
+    </view>
+    <view class='addcar' bindtap='ifaddcar'>加入购物车</view>
+    <view class='buynow' bindtap='ifbuynow'>立即购买</view>
+  </view>
+</view>
+
+<!--mask-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="modal-content" wx:if="{{showModalStatus}}">
+
+  <!--drawer content-->
+  <view class='modalInfo'>
+    <view class='guigeInfo'>
+      <view class='close' bindtap="powerDrawer" data-statu="close">×</view>
+      <view class='modalimg'>
+        <image src="{{globalData.goodsfaceurl_900+goodsinfo.goodsface}}" mode='scaleToFill'></image>
+      </view>
+      <view class='guige-wrap'>
+        <text class='price'><text class='fuhao'>￥</text>{{goodsinfo.sellprice/100}}</text>
+        <text class='xzguige'>已选：<text wx:for='{{current}}'>{{item.valuename}}</text></text>
+      </view>
+    </view>
+    <view class='props-wrap'>
+      <block wx:for='{{propstitle}}' wx:for-index="idx">
+        <view class='props-title'>
+          {{item}}
+          <!-- <<<<<<< HEAD
+        </view>
+        <view class='props-info'>
+          <button wx:for='{{guige[idx]}}' wx:for-item="prop" wx:for-index='uindex' wx:key='{{propid}}' bindtap='choose' data-index='{{idx}}' data-item='{{prop}}' style="{{prop.propvalueid==current[idx].currentpropid?'background:#fb6d07;color:#fff':'background:#f8f8f8,color:#333'}}">
+            {{prop.valuename}}</button>
+        </view>
+======= -->
+        </view>
+        <view class='props-info'>
+          <view wx:for='{{guige[idx]}}' wx:for-item="prop" wx:for-index='uindex' class='clickbtn' wx:key='{{propid}}' bindtap='choose' data-index='{{idx}}' data-item='{{prop}}' style="{{prop.propvalueid==current[idx].currentpropid?'background:#fb6d07;color:#fff':'background:#f8f8f8,color:#333'}}">
+            {{prop.valuename}}</view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+  <view class='num-wrap'>
+    <view class='props-title'>数量</view>
+    <view class="stepper">
+      <text class="jian" bindtap='jian'>-</text>
+      <input type="number" disabled='true' placeholder='1' value="{{count}}" />
+      <text class="jia" bindtap='jia'>+</text>
+    </view>
+  </view>
+  <view class='modal-footer'>
+    <view class='addcar' bindtap='addcar'>加入购物车</view>
+    <view class='buynow' bindtap='buynow'>立即购买</view>
+  </view>
+  <!-- <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>  -->
+</view>
+<view class='redyouzi' bindtap='redyouzi'>
+  <image src='/assests/icon/icon_redyouzi_logo@2x.png'></image>
+  红柚子科技技术支持
+</view>

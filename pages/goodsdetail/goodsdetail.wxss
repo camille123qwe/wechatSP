@@ -1,0 +1,377 @@
+/* pages/goodsdetail/goodsdetail.wxss */
+page{
+  background: #f7f7f7;
+  position: relative;
+  width: 100%;
+  padding-bottom: 96rpx;
+}
+.redyouzi{
+  bottom: 100rpx;
+}
+.goods-wrap{
+   background: #f7f7f7;
+}
+.goodsinfo,.guige,.product,.flex-img{
+  background: #fff;
+}
+.goodsbanner{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.goodsbanner image{
+  width: 100%;
+  top: 0;
+}
+.goodsinfo{
+  height: 132rpx;
+  padding: 24rpx 24rpx;
+  position: relative;
+}
+.goodsinfo .price{
+  position: absolute;
+  bottom: 20rpx;
+}
+.preprice{
+  padding-left: 10rpx;
+  color: #888;
+  font-size: 24rpx;
+  text-decoration: line-through;
+}
+.greyfuhao{
+  color: #888;
+  font-size: 24rpx;
+}
+.guige{
+  width: 100%;
+  overflow: hidden;
+  height: 90rpx;
+  border-top:  20rpx solid #f7f7f7;
+  padding-left: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.guige>view{
+  width: 100%;
+}
+.guige text{
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.imgbox{
+  width: 500rpx;
+  height: 100%;
+  padding: 0 50rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.imgbox image{
+  width: 13rpx;
+  height: 22rpx;
+  text-align: right;
+}
+.ptitle{
+  border-top: 20rpx solid #f7f7f7;
+  height: 90rpx;
+  font-size: 30rpx;
+  padding-left: 24rpx;
+  line-height: 90rpx;
+  border-bottom: solid 1rpx #ddd;
+}
+.pinfo{
+  padding: 30rpx 24rpx 40rpx 24rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.p-wrap{
+  width: 100%;
+}
+.mb{
+  margin-bottom: 96rpx;
+}
+.grey-title{
+  height: 80rpx;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line{
+  width: 92rpx;
+  height: 2rpx;
+  background: #888;
+}
+.mid-text{
+  margin: 0 20rpx;
+  font-size: 22rpx;
+  color: #888;
+
+}
+.orange-line{
+  border-left: solid 8rpx #fb6d07;
+  height: 78rpx;
+  line-height: 78rpx;
+  padding-left: 18rpx;
+  background: #fff;
+}
+.img-wrap{
+  display: flex;
+  flex-direction: column;
+}
+.detail-img{
+  width: 100%;
+}
+.hot-view{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.flex-img{
+ width: 370rpx;
+ margin-bottom: 10rpx;
+}
+.flex-img image{
+ width: 370rpx;
+ min-height: 138px;
+}
+.noflex{
+  clear: both;
+  display: block;
+  margin-top: 10rpx;
+  text-align: left;
+  height: 136rpx;
+  padding-left: 25rpx;
+  position: relative;
+}
+.noflex .price{
+  margin-top: 10rpx;
+  position: absolute;
+  bottom: 10rpx;
+}
+.goodsname{
+  font-size: 30rpx;
+  color: #333;
+}
+.sellprice{
+  font-size: 50rpx !important;
+}
+.fuhao{
+  font-size: 40rpx;
+}
+.price{
+  font-family: Arial;
+  font-size: 40rpx;
+  color: #fb6d07;
+  margin-top: 22rpx;
+}
+.hot-view .goodsname{
+    height:78rpx;
+  display:inline-block;
+  width:320rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+}
+.footer{
+  width: 100%;
+  height: 96rpx;
+  position: fixed;
+  background: #ffffff;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: solid 1rpx #ddd;
+}
+.ficon-wrap{
+   display:-moz-box;
+  display:-webkit-box;
+  display:box;
+  flex-direction: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 290rpx;
+  height: 100%;
+  position: relative;
+}
+.f-icon{
+   -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.f-icon image{
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.addcar,.buynow{
+  width: 230rpx;
+  height: 100%;
+  line-height: 96rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+}
+.addcar{
+  background: #ffac01;
+}
+.buynow{
+  background: #fb6d07;
+}
+.footsize{
+  font-size: 20rpx;
+}
+/*modal自定义  */
+
+.drawer_screen { 
+ width: 100%; 
+ height: 100%; 
+ position: fixed; 
+ top: 0; 
+ left: 0; 
+ z-index: 1000; 
+ background: #000; 
+ opacity: 0.5; 
+ overflow: hidden; 
+} 
+.modal-content{
+ width: 100%; 
+ overflow: hidden; 
+ position: fixed; 
+ left: 0; 
+ bottom: 0;
+ z-index: 1001; 
+ background: #fff; 
+ min-height: 575rpx;
+}
+.modalInfo{
+  margin-bottom: 272rpx;
+  
+}
+.guigeInfo{
+  width: 100%;
+  height: 174rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1rpx #ddd;
+}
+.modalimg{
+  width: 226rpx;
+  height: 100%;
+  padding: 14rpx 32rpx 0 30rpx;
+}
+.guigeInfo image{
+  width: 226rpx;
+  height: 144rpx;
+}
+.guige-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+.guige-wrap .price{
+  margin:25rpx 0 20rpx 0;
+
+}
+.xzguige{
+  font-size: 28rpx;
+}
+.close{
+  position:absolute;
+  right:30rpx;
+  top:20rpx;
+  width:100rpx;
+  height:100rpx;
+  text-align:right;
+}
+.props-info{
+  display:box-flex;
+  align-content:flex-start;
+  flex-flow:row wrap;
+}
+.props-title{
+  font-size: 28rpx;
+  color:#333;
+  margin: 20rpx 0 20rpx 30rpx;
+  
+}
+.props-info .clickbtn{
+ width:209rpx;
+  height:60rpx;
+  text-align:center;
+  line-height:60rpx;
+  display:inline-block;
+  color:#333;
+  font-size:24rpx;
+  margin:0 10px;
+  background: #f8f8f8;
+  border-radius: 10rpx;
+}
+.stepper {
+background: #f5f5f5;
+height: 60rpx;
+border-radius: 3px;
+color: #cacaca;
+margin-right: 30rpx;
+}
+
+.stepper text {
+width: 66rpx;
+line-height: 60rpx;
+text-align: center;
+float: left;
+}
+
+.stepper input {
+width: 76rpx;
+height: 60rpx;
+float: left;
+text-align: center;
+font-size: 28rpx;
+/*给中间的input设置左右边框即可*/
+border-left: 1px solid #fff;
+border-right: 1px solid #fff;
+color: #333;
+}
+.num-wrap{
+  position: absolute;
+  bottom: 100rpx;
+  height: 150rpx;
+  overflow: hidden;  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-top: solid 1rpx #ddd;
+}
+.modal-footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+}
+.modal-footer .addcar,.modal-footer .buynow{
+  width: 50%;
+}
+contact-button{
+  display:inline-block;
+  line-height:0;
+  z-index:9999999999;
+  position:absolute;
+  opacity:0;
+}
